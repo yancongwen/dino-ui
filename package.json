@@ -4,6 +4,7 @@
   "description": "Personal Vue UI",
   "main": "index.js",
   "scripts": {
+    "serve": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

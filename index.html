@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Dino UI</title>
+  <script src="//at.alicdn.com/t/font_1013200_5u8vastp9qv.js"></script>
 </head>
 
 <body>
@@ -31,12 +32,34 @@
     body {
       font-size: var(--font-size);
     }
+    .item {
+      margin: 20px;
+    }
   </style>
   </head>
 
   <body>
     <div id="app">
-      <d-button>按钮</d-button>
+      <div class="item">
+        <h2>图标</h2>
+        <d-icon type="setting"></d-icon>
+        <d-icon type="loading"></d-icon>
+        <d-icon type="download"></d-icon>
+        <d-icon type="thumbs-up"></d-icon>
+      </div>
+      <div class="item">
+          <h2>按钮</h2>
+        <d-button>按钮</d-button>
+        <d-button icon="setting">设置</d-button>
+        <d-button icon="setting" icon-position="right">设置</d-button>
+        <d-button :loading="true" icon-position="right">加载中</d-button>
+        <d-button icon="download" :loading="loading" @click="changeLoading">点击切换状态</d-button>
+        <d-button-group>
+          <d-button>上一页</d-button>
+          <d-button>更多</d-button>
+          <d-button>下一页</d-button>
+        </d-button-group>
+      </div>
     </div>
     <script src="./src/app.js"></script>
   </body>
