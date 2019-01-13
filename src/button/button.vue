@@ -51,7 +51,7 @@ export default {
   }
   &.d-icon-right {
     .d-button-icon {
-      order: 2;
+      order: 1;
       margin-right: 0;
       margin-left: 0.2em;
     }
