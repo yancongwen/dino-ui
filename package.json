@@ -2,9 +2,9 @@
   "name": "dino-ui",
   "version": "0.1.0",
   "description": "Personal Vue UI",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "serve": "parcel index.html",
+    "start": "parcel index.html",
     "dev-test": "parcel watch tests/* --no-cache & karma start",
     "test": "parcel build tests/* --no-cache --no-minify && karma start --single-run"
   },
