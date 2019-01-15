@@ -1,6 +1,6 @@
 # Dino-UI: 一个 Vue UI 组件库
 
-[![Build Status](https://travis-ci.org/yancongwen/dino-ui.svg?branch=master)](https://travis-ci.org/yancongwen/dino-ui)
+[![Build Status](https://travis-ci.com/yancongwen/dino-ui.svg?branch=master)](https://travis-ci.com/yancongwen/dino-ui)
 
 
 ## 介绍
