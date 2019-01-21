@@ -1,12 +1,17 @@
 {
   "name": "dino-ui",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "description": "Personal Vue UI",
   "main": "dist/index.js",
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html --no-cache --open",
+    "build": "parcel build index.js --no-cache --no-minify --no-source-maps",
     "dev-test": "parcel watch tests/* --no-cache & karma start",
     "test": "parcel build tests/* --no-cache --no-minify && karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yancongwen/dino-ui.git"
   },
   "keywords": [
     "vue",
