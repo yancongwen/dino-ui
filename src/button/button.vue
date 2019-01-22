@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: 'Button',
   props: {
     icon: String,
     iconPosition: {
@@ -64,6 +65,9 @@ export default {
   }
   &:focus {
     outline: none;
+  }
+  &[disabled] {
+    cursor: not-allowed;
   }
 }
 @keyframes d-load-loop {

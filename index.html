@@ -46,7 +46,7 @@
     <div id="app">
       <div class="item">
         <h2>图标</h2>
-        <d-icon type="comment" :size="20"></d-icon>
+        <d-icon type="comment" :size="20" @click="change"></d-icon>
         <d-icon type="audio" :size="20"></d-icon>
         <d-icon type="zoomin" :size="20"></d-icon>
         <d-icon type="zoomout" :size="20"></d-icon>
@@ -54,8 +54,9 @@
         <d-icon type="download" :size="20" color="red"></d-icon>
       </div>
       <div class="item">
-          <h2>按钮</h2>
+        <h2>按钮</h2>
         <d-button>按钮</d-button>
+        <d-button disabled>按钮</d-button>
         <d-button icon="setting">设置</d-button>
         <d-button icon="setting" icon-position="right">设置</d-button>
         <d-button :loading="true" icon-position="right">加载中</d-button>
@@ -65,6 +66,15 @@
           <d-button>更多</d-button>
           <d-button>下一页</d-button>
         </d-button-group>
+      </div>
+      <div class="item">
+        <h2>输入框</h2>
+        <d-input v-model="data" clearable></d-input>
+        <d-input v-model="data" ></d-input>
+        {{data}}
+        <d-input type="password" placeholder="密码" element-id="test-id"></d-input>
+        <d-input placeholder="禁止" disabled :width="100"></d-input>
+        <d-input placeholder="readonly" readonly width="100"></d-input>
       </div>
     </div>
     <script src="./src/app.js"></script>

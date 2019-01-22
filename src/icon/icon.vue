@@ -3,6 +3,7 @@
     class="d-icon"
     aria-hidden="true"
     :style="styles"
+    @click="$emit('click',$event)"
   >
     <use :xlink:href="`#icon-${type}`"></use>
   </svg>
@@ -12,6 +13,7 @@
 import './icon-svg'
 
 export default {
+  name: 'Icon',
   props: {
     type: {
       type: String,
@@ -29,6 +31,9 @@ export default {
       }
       if (this.color) {
         style.color = this.color
+      }
+      if (this.$listeners.click) {
+        style.cursor = 'pointer'
       }
       return style
     }
