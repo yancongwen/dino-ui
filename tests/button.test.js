@@ -59,13 +59,9 @@ describe('Button', () => {
 
   it('click', () => {
     const MyComponent = Vue.extend(Button)
-    const vm = new MyComponent({
-      propsData: {
-        icon: 'settings',
-      }
-    }).$mount()
+    const vm = new MyComponent().$mount()
     // 利用间谍函数检测按钮的点击事件
-    const callback = sinon.fake();
+    const callback = sinon.fake()
     vm.$on('click', callback)
     vm.$el.click()
     expect(callback).to.have.been.called

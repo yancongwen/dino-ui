@@ -3,7 +3,7 @@
     class="d-icon"
     aria-hidden="true"
     :style="styles"
-    @click="$emit('click',$event)"
+    @click="handleClick"
   >
     <use :xlink:href="`#icon-${type}`"></use>
   </svg>
@@ -36,6 +36,11 @@ export default {
         style.cursor = 'pointer'
       }
       return style
+    }
+  },
+  methods: {
+    handleClick(event) {
+      this.$emit('click', event)
     }
   }
 }
