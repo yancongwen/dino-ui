@@ -81,14 +81,17 @@ export default {
       this.currentValue = ''
       this.$emit('input', '')
       this.$emit('change', { target: { value: '' } })
+      this.$emit('input-change', { target: { value: '' } })
     },
     handleInput(event) {
+      // 输入时触发
       let value = event.target.value
       this.currentValue = value
       this.$emit('input', value)
       this.$emit('change', event)
     },
     handleChange(event) {
+      // 输入内容改变且鼠标离开输入框时触发
       this.$emit('input-change', event)
     },
     handleFocus(event) {
@@ -98,16 +101,16 @@ export default {
       this.$emit('blur', event)
     },
     handleEnter(event) {
-      this.$emit('key-enter', event)
+      this.$emit('keyenter', event)
     },
     handleKeyup(event) {
-      this.$emit('key-up', event)
+      this.$emit('keyup', event)
     },
     handleKeypress(event) {
-      this.$emit('key-press', event)
+      this.$emit('keypress', event)
     },
     handleKeydown(event) {
-      this.$emit('key-down', event)
+      this.$emit('keydown', event)
     }
   },
   watch: {

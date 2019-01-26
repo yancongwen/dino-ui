@@ -1,9 +1,6 @@
 const expect = chai.expect;
 import Vue from 'vue'
 import Button from '../src/button/button'
-// Button 组件依赖 Icon 组件，测试环境中单独注册一下
-import Icon from '../src/icon/icon'
-Vue.component('d-icon', Icon)
 
 Vue.config.productionTip = false
 Vue.config.devtools = false
