@@ -7,8 +7,13 @@
 </template>
 
 <script>
+import dIcon from '../icon/icon'
+
 export default {
-  name: 'Button',
+  name: 'DinoButton',
+  components: {
+    dIcon
+  },
   props: {
     icon: String,
     iconPosition: {

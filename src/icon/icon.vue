@@ -13,7 +13,7 @@
 import './icon-svg'
 
 export default {
-  name: 'Icon',
+  name: 'DinoIcon',
   props: {
     type: {
       type: String,

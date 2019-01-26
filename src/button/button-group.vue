@@ -6,12 +6,17 @@
 
 <script>
 export default {
-  name: 'ButtonGroup',
+  name: 'DinoButtonGroup',
   mounted() {
-    for (let node of this.$el.children) {
-      let name = node.nodeName.toLowerCase()
-      if (name !== 'button') {
-        console.warn(`d-button-group 的子元素应该全是 d-button，但是你写的是 ${name}`)
+    if(this.$children.length < this.$el.children.length) {
+      console.warn(`DinoButtonGroup 的子元素应该全是 DinoButton`)
+      return
+    }
+    for (let child of this.$children) {
+      let name = child.$options.name
+      if (name !== 'DinoButton') {
+        console.warn(`DinoButtonGroup 的子元素应该全是 DinoButton`)
+        return
       }
     }
   }

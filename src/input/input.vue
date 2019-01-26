@@ -29,8 +29,13 @@
 </template>
 
 <script>
+import dIcon from '../icon/icon'
+
 export default {
-  name: 'Input',
+  name: 'DinoInput',
+  components: {
+    dIcon
+  },
   props: {
     type: {
       default: 'text',
