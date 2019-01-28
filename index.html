@@ -39,6 +39,26 @@
       font-weight: 500;
       color: #666;
     }
+    .layout {
+      border: 1px solid #900;
+      margin: 10px 0;
+    }
+    .header {
+      height: 50px;
+      border: 1px solid #999;
+    }
+    .footer {
+      height: 50px;
+      border: 1px solid #999;
+    }
+    .sider {
+      width: 100px;
+      border: 1px solid #999;
+    }
+    .content {
+      border: 1px solid #999;
+      height: 200px;
+    }
   </style>
   </head>
 
@@ -86,6 +106,25 @@
             <div style="height: 50px; border: 1px solid #999">2</div>
           </d-col>
         </d-row>
+      </div>
+      <div class="item">
+        <h2>页面布局</h2>
+        <d-layout class="layout">
+          <d-header class="header">Header</d-header>
+          <d-layout>
+            <d-sider class="sider">Sider</d-sider>
+            <d-content class="content">Content</d-content>
+          </d-layout>
+          <d-footer class="footer">Footer</d-footer>
+        </d-layout>
+        <d-layout class="layout">
+          <d-sider class="sider">Sider</d-sider>
+          <d-layout>
+            <d-header class="header">Header</d-header>
+            <d-content class="content">Content</d-content>
+            <d-footer class="footer">Footer</d-footer>
+          </d-layout>
+        </d-layout>
       </div>
     </div>
     <script src="./src/app.js"></script>
