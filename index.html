@@ -44,7 +44,7 @@
 
   <body>
     <div id="app">
-      <div class="item">
+      <!-- <div class="item">
         <h2>图标</h2>
         <d-icon type="comment" :size="20" @click="change"></d-icon>
         <d-icon type="audio" :size="20"></d-icon>
@@ -75,6 +75,32 @@
         <d-input type="password" placeholder="密码" element-id="test-id"></d-input>
         <d-input placeholder="禁止" disabled :width="100"></d-input>
         <d-input placeholder="readonly" readonly width="100"></d-input>
+      </div> -->
+      <div class="item">
+        <h2>网格布局</h2>
+        <d-row :gutter="20" justify="start" align="middle">
+          <d-col span="1" :xs="24">
+            <div style="height: 50px; border: 1px solid #999">1</div>
+          </d-col>
+          <d-col span="2" :xs="{span:1}">
+            <div style="height: 50px; border: 1px solid #999">2</div>
+          </d-col>
+          <d-col span="4">
+            <div style="height: 50px; border: 1px solid #999">3</div>
+          </d-col>
+          <d-col span="6">
+            <div style="height: 50px; border: 1px solid #999">4</div>
+          </d-col>
+          <d-col span="8">
+            <div style="height: 50px; border: 1px solid #999">3</div>
+          </d-col>
+          <d-col span="10">
+            <div style="height: 50px; border: 1px solid #999">4</div>
+          </d-col>
+          <d-col span="12" :offset="1">
+            <div style="height: 50px; border: 1px solid #999">4</div>
+          </d-col>
+        </d-row>
       </div>
     </div>
     <script src="./src/app.js"></script>
