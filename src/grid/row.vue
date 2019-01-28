@@ -88,10 +88,10 @@ export default {
 .d-row {
   display: flex;
   flex-flow: row wrap;
-  &.d-row-justify-left {
+  &.d-row-justify-start {
     justify-content: flex-start;
   }
-  &.d-row-justify-right {
+  &.d-row-justify-end {
     justify-content: flex-end;
   }
   &.d-row-justify-center {
