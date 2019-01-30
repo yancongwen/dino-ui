@@ -30,6 +30,7 @@
     }
     body {
       font-size: var(--font-size);
+      font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
     }
     .item {
       margin: 20px;
@@ -95,6 +96,10 @@
         <d-input type="password" placeholder="密码" element-id="test-id"></d-input>
         <d-input placeholder="禁止" disabled :width="100"></d-input>
         <d-input placeholder="readonly" readonly width="100"></d-input>
+      </div>
+      <div class="item">
+        <h2>全局提示</h2>
+        <d-button @click="showMessage">提示</d-button>
       </div>
       <div class="item">
         <h2>网格布局</h2>
