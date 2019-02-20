@@ -40,8 +40,32 @@ new Vue({
     change(value) {
       console.log(value)
     },
-    showMessage() {
-      this.$Message('Hello!')
+    showMessage1() {
+      this.$Message('文件上传成功！<a href="">链接</a>', {
+        autoClose: false,
+        enableHtml: true,
+        position: 'top',
+        closeButton: {
+          text: '知道了',
+          callback: (data) => {
+            console.log(data)
+          }
+        }
+      })
+    },
+    showMessage2() {
+      this.$Message('文件上传成功！<a href="">链接</a>', {
+        autoClose: 5,
+        enableHtml: false,
+        position: 'bottom'
+      })
+    },
+    showMessage3() {
+      this.$Message('文件上传成功！<a href="">链接</a>', {
+        autoClose: false,
+        enableHtml: true,
+        position: 'middle'
+      })
     }
   }
 })

@@ -65,7 +65,7 @@
 
   <body>
     <div id="app">
-      <div class="item">
+      <div class="item" v-if="false">
         <h2>图标</h2>
         <d-icon type="comment" :size="20" @click="change"></d-icon>
         <d-icon type="audio" :size="20"></d-icon>
@@ -74,7 +74,7 @@
         <d-icon type="loading" :size="20"></d-icon>
         <d-icon type="download" :size="20" color="red"></d-icon>
       </div>
-      <div class="item">
+      <div class="item" v-if="false">
         <h2>按钮</h2>
         <d-button>按钮</d-button>
         <d-button disabled>按钮</d-button>
@@ -88,7 +88,7 @@
           <d-button>下一页</d-button>
         </d-button-group>
       </div>
-      <div class="item">
+      <div class="item" v-if="false">
         <h2>输入框</h2>
         <d-input v-model="data" clearable></d-input>
         <d-input v-model="data" ></d-input>
@@ -99,9 +99,11 @@
       </div>
       <div class="item">
         <h2>全局提示</h2>
-        <d-button @click="showMessage">提示</d-button>
+        <d-button @click="showMessage1">提示1</d-button>
+        <d-button @click="showMessage2">提示2</d-button>
+        <d-button @click="showMessage3">提示3</d-button>
       </div>
-      <div class="item">
+      <div class="item" v-if="false">
         <h2>网格布局</h2>
         <d-row :gutter="20" justify="start" align="middle">
           <d-col :xs="24" :sm="12" :md="8" :lg="4">
@@ -112,7 +114,7 @@
           </d-col>
         </d-row>
       </div>
-      <div class="item">
+      <div class="item" v-if="false">
         <h2>页面布局</h2>
         <d-layout class="layout">
           <d-header class="header">Header</d-header>
