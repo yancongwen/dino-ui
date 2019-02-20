@@ -1,5 +1,27 @@
+import Icon from './src/icon/icon'
 import Button from './src/button/button'
 import ButtonGroup from './src/button/button-group'
-import Icon from './src/icon/icon'
+import Input from './src/input/input'
+import Row from './src/grid/row'
+import Col from './src/grid/col'
+import Layout from './src/layout/layout'
+import Header from './src/layout/header'
+import Footer from './src/layout/footer'
+import Content from './src/layout/content'
+import Sider from './src/layout/sider'
+import Message from './src/message'
 
-export { ButtonGroup, Button, Icon }
+export {
+  Icon,
+  Button,
+  ButtonGroup,
+  Input,
+  Row,
+  Col,
+  Layout,
+  Header,
+  Footer,
+  Content,
+  Sider,
+  Message
+}
