@@ -11,6 +11,11 @@ import Footer from './layout/footer'
 import Content from './layout/content'
 import Sider from './layout/sider'
 import Message from './message'
+import Tabs from './tabs/Tabs'
+import TabsHead from './tabs/tabs-head'
+import TabsBody from './tabs/tabs-body'
+import TabsItem from './tabs/tabs-item'
+import TabsPane from './tabs/tabs-pane'
 
 Vue.component('d-icon', Icon)
 Vue.component('d-button', Button)
@@ -23,6 +28,11 @@ Vue.component('d-header', Header)
 Vue.component('d-footer', Footer)
 Vue.component('d-content', Content)
 Vue.component('d-sider', Sider)
+Vue.component('d-tabs', Tabs)
+Vue.component('d-tabs-head', TabsHead)
+Vue.component('d-tabs-body', TabsBody)
+Vue.component('d-tabs-item', TabsItem)
+Vue.component('d-tabs-pane', TabsPane)
 Vue.use(Message)
 
 new Vue({
@@ -30,7 +40,8 @@ new Vue({
   data() {
     return {
       loading: false,
-      data: 123
+      data: 123,
+      currentTab: '1'
     }
   },
   methods: {
