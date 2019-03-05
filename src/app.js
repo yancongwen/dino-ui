@@ -16,6 +16,9 @@ import TabsHead from './tabs/tabs-head'
 import TabsBody from './tabs/tabs-body'
 import TabsItem from './tabs/tabs-item'
 import TabsPane from './tabs/tabs-pane'
+import Collapse from './collapse/collapse.vue'
+import CollapseItem from './collapse/collapse-item'
+
 
 Vue.component('d-icon', Icon)
 Vue.component('d-button', Button)
@@ -33,6 +36,8 @@ Vue.component('d-tabs-head', TabsHead)
 Vue.component('d-tabs-body', TabsBody)
 Vue.component('d-tabs-item', TabsItem)
 Vue.component('d-tabs-pane', TabsPane)
+Vue.component('d-collapse', Collapse)
+Vue.component('d-collapse-item', CollapseItem)
 Vue.use(Message)
 
 new Vue({
@@ -41,7 +46,9 @@ new Vue({
     return {
       loading: false,
       data: 123,
-      currentTab: '1'
+      currentTab: '1',
+      currentCollapse: [],
+      currentCollapse2: '1'
     }
   },
   methods: {
