@@ -71,7 +71,6 @@ export default {
       for (let child of this.$children) {
         let name = child.$options.name
         if (['DinoTabsHead', 'DinoTabsBody'].indexOf(name) === -1) {
-          debugger
           valid = false
         }
       }
