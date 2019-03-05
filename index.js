@@ -10,6 +10,11 @@ import Footer from './src/layout/footer'
 import Content from './src/layout/content'
 import Sider from './src/layout/sider'
 import Message from './src/message'
+import Tabs from './src/tabs/tabs'
+import TabsHead from './src/tabs/tabs-head'
+import TabsBody from './src/tabs/tabs-body'
+import TabsItem from './src/tabs/tabs-item'
+import TabsPane from './src/tabs/tabs-pane'
 
 export {
   Icon,
@@ -23,5 +28,10 @@ export {
   Footer,
   Content,
   Sider,
-  Message
+  Message,
+  Tabs,
+  TabsHead,
+  TabsBody,
+  TabsItem,
+  TabsPane
 }
