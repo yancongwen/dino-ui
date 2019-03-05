@@ -16,6 +16,10 @@ export default {
   props: {
     value: {
       type: [String, Number]
+    },
+    animated: {
+      type: Boolean,
+      default: true
     }
   },
   data() {
@@ -36,6 +40,7 @@ export default {
     this.eventBus.$on('change', value => {
       this.$emit('change', value)
     })
+    this.eventBus.animated = this.animated
     this.init()
   },
   methods: {

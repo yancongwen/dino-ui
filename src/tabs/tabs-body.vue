@@ -15,12 +15,14 @@ export default {
   },
   computed: {
     styles() {
+      let duration = this.eventBus.animated ? 0.3 : 0
       return {
-        transform: `translateX(-${this.currentIndex*100}%)`
+        'transform': `translateX(-${this.currentIndex*100}%)`,
+        'transition-duration': `${duration}s`
       }
     }
   },
-  created() {
+  mounted() {
     this.eventBus.$on('change', value => {
       this.$children.forEach( (vm, index) => {
         if (vm.name === value) {

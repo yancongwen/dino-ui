@@ -135,11 +135,12 @@
       </div>
       <div class="item" v-if="true">
         <h2>标签页</h2>
-        <d-tabs v-model="currentTab">
+        <d-tabs v-model="currentTab" :animated="false">
           <d-tabs-head>
             <d-tabs-item name="1">时政</d-tabs-item>
             <d-tabs-item name="2">军事</d-tabs-item>
-            <d-tabs-item name="3" disabled>国际</d-tabs-item>
+            <d-tabs-item name="3">国际</d-tabs-item>
+            <d-tabs-item name="4" disabled>娱乐</d-tabs-item>
           </d-tabs-head>
           <d-tabs-body>
             <d-tabs-pane name="1">
@@ -153,6 +154,10 @@
             <d-tabs-pane name="3">
               <p>国际国际国际国际国际国际国际国际</p>
               <p>国际国际国际国际国际国际国际国际</p>
+            </d-tabs-pane>
+            <d-tabs-pane name="4">
+              <p>娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐</p>
+              <p>娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐</p>
             </d-tabs-pane>
           </d-tabs-body>
         </d-tabs>
