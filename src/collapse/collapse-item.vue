@@ -4,7 +4,7 @@
       <d-icon type="right" class="d-icon" v-if="!hideArrow" :class="{down: isActive}"></d-icon>
       <slot></slot>
     </div>
-    <div class="d-collapse-content" v-if="isActive">
+    <div class="d-collapse-content" :class="{show: isActive}">
       <slot name="content"></slot>
     </div>
   </div>
@@ -31,6 +31,16 @@ export default {
     return {
       index: 0,
       isActive: false
+    }
+  },
+  watch: {
+    isActive() {
+      let contentDiv = this.$el.querySelector('.d-collapse-content')
+      if (this.isActive) {
+        contentDiv.style.height = `${contentDiv.scrollHeight + 13}px`
+      } else {
+        contentDiv.style.height = 0
+      }
     }
   },
   methods: {
@@ -61,9 +71,15 @@ export default {
   }
   .d-collapse-content {
     line-height: 26px;
-    padding: 6px;
     background: #fff;
-    border-top: 1px solid #ccc;
+    height: 0;
+    padding: 0 6px;
+    overflow: hidden;
+    transition: height .2s ease-in-out, padding .2s ease-in-out;
+    &.show {
+      padding: 6px;
+      border-top: 1px solid #ccc;
+    }
   }
   &:nth-child(1) {
     border-top: 0;
