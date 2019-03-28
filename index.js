@@ -15,8 +15,8 @@ import TabsHead from './src/tabs/tabs-head'
 import TabsBody from './src/tabs/tabs-body'
 import TabsItem from './src/tabs/tabs-item'
 import TabsPane from './src/tabs/tabs-pane'
-import Collapse from './collapse/collapse.vue'
-import CollapseItem from './collapse/collapse-item'
+import Collapse from './src/collapse/collapse.vue'
+import CollapseItem from './src/collapse/collapse-item'
 
 export {
   Icon,
