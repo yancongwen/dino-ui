@@ -1,8 +1,8 @@
 <template>
   <div class="demo">
     <d-button @click="showMessage1">顶部提示</d-button>
-    <d-button @click="showMessage2">中间提示</d-button>
-    <d-button @click="showMessage3">底部提示</d-button>
+    <d-button @click="showMessage2">底部提示</d-button>
+    <d-button @click="showMessage3">中间提示</d-button>
   </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
     },
     showMessage3 () {
       this.$Message('文件上传成功！<a href="">链接</a>', {
-        autoClose: false,
+        autoClose: 5,
         enableHtml: true,
         position: 'middle'
       })
