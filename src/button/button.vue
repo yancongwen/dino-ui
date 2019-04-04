@@ -29,7 +29,7 @@ export default {
     }
   },
   methods: {
-    handleClick(event) {
+    handleClick (event) {
       this.$emit('click', event)
     }
   }
@@ -37,16 +37,24 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+$button-height: 32px;
+$font-size: 14px;
+$button-bg: white;
+$button-active-bg: #eee;
+$border-radius: 4px;
+$color: #333;
+$border-color: #999;
+$border-color-hover: #666;
 .d-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: var(--font-size);
-  height: var(--button-height);
-  padding: 0 .8em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  font-size: $font-size;
+  height: $button-height;
+  padding: 0 0.8em;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   vertical-align: middle;
   cursor: pointer;
   .d-loadding {
@@ -63,10 +71,10 @@ export default {
     }
   }
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;
@@ -76,8 +84,14 @@ export default {
   }
 }
 @keyframes d-load-loop {
-  from { transform: rotate(0deg);}
-  50%  { transform: rotate(180deg);}
-  to   { transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

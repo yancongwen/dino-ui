@@ -133,6 +133,7 @@ $animation-duration: 300ms;
 }
 
 .d-message {
+  z-index: 9999;
   display: flex;
   align-items: center;
   font-size: $font-size;

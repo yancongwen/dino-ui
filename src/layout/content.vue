@@ -13,5 +13,6 @@ export default {
 <style lang='scss' scoped>
 .d-content {
   flex: 1;
+  width: 100%;
 }
 </style>

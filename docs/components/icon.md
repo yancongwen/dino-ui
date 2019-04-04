@@ -1,6 +1,7 @@
 # Icon 图标
 
 ## 概述
+
 DIno-UI 提供了一套和 [Ant Design](https://www.iconfont.cn/collections/detail?cid=9402) 相同的图标。
 
 ## 示例
@@ -26,14 +27,10 @@ DIno-UI 提供了一套和 [Ant Design](https://www.iconfont.cn/collections/deta
 </template>
 
 <script>
-import { Icon } from '../../../index.js'
 export default {
-  components: {
-    'd-icon': Icon
-  },
   methods: {
-    onclick(value) {
-      console.log(value)
+    onclick(e) {
+      console.log(e)
     }
   }
 }
@@ -42,8 +39,8 @@ export default {
 
 </details>
 
-
 ## API
+
 #### props
 
 | 属性 | 说明 | 类型 | 默认值 |
